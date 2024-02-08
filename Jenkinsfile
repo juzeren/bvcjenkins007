@@ -15,7 +15,7 @@ pipeline {
             steps {
                 withAWS(region:'us-east-1',credentials:'bvc-007') {
                 sh 'echo "Uploading content with AWS creds"'
-                    s3Upload(pathStyleAccessEnabled: true, payloadSigningEnabled: true, file:'index.html', 'second-page.html','bvcjenkins007', bucket:'mys3-007')
+                    s3Upload(pathStyleAccessEnabled: true, payloadSigningEnabled: true, file:'.', bucket:'mys3-007')
                 }
             }
         }
